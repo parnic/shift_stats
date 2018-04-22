@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'shift_stats'
   s.version     = '0.1.0'
-  s.date        = Date.today.to_s
+  s.date        = '2018-04-22'
   s.summary     = 'Shift stats API'
   s.description = 'Interfaces with Digital Shift APIs (HockeyShift, BasketballShift, etc.)'
   s.authors     = ['Chris Pickett']
