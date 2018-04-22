@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'shift_stats'
-  s.version     = '0.0.1'
-  s.date        = '2018-04-05'
+  s.version     = '0.1.0'
+  s.date        = Date.today.to_s
   s.summary     = 'Shift stats API'
   s.description = 'Interfaces with Digital Shift APIs (HockeyShift, BasketballShift, etc.)'
   s.authors     = ['Chris Pickett']
@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/parnic/shift_stats'
   s.license       = 'MIT'
   s.add_runtime_dependency 'httpclient', '~> 2'
-  s.add_development_dependency 'rake', '~> 0'
-  s.add_development_dependency 'rspec', '~> 0'
+  s.add_development_dependency 'rake', '~> 12'
+  s.add_development_dependency 'rspec', '~> 3'
 end
