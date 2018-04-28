@@ -1,13 +1,7 @@
 # ShiftStats gem
 This gem pulls data from Digital Shift sites such as HockeyShift, SoccerShift, LacrosseShift, FootballShift, BasketballShift, and BaseballShift.
-[![Gem Version](https://badge.fury.io/rb/shift_stats.svg)](http://badge.fury.io/rb/shift_stats)
 
-## Features
-* Get details about any team for any sport
-* Get a specific team's game schedule
-* Retrieve the list of players on a specific team
-* Find all games for a specific division
-* Find all divisions in a specific season
+[![Gem Version](https://badge.fury.io/rb/shift_stats.svg)](http://badge.fury.io/rb/shift_stats)
 
 ## Install
 You can install shift_stats via rubygems: `gem install shift_stats`
@@ -26,7 +20,7 @@ ShiftStats.configure do |config|
 end
 ```
 
-Create a new instance of ShiftSats with `s = new ShiftStats`. This connects to the ShiftStats server, logs in, and stores the ticket hash. This ticket is only valid for a limited amount of time.
+Create a new instance of ShiftStats with `s = ShiftStats.new`. This connects to the ShiftStats server, logs in, and stores the ticket hash. This ticket is only valid for a limited amount of time.
 
 Creating an instance of the class can raise an error if there are network issues or the API key is invalid.
 
@@ -55,7 +49,7 @@ Creating an instance of the class can raise an error if there are network issues
 * `game_goalies(game_id, only: nil)` - Returns a list of goalies in the specified game.
   * Valid values for `only` are `:home` and `:away`. If not specified, both teams' goalies are included.
 * `game_penalties(game_id, only: nil)` - Returns a list of penalties in the specified game.
-  * Valid values for `only` are `:home` and `:away`. If not specified, both teams' goalies are included.
+  * Valid values for `only` are `:home` and `:away`. If not specified, both teams' penalties are included.
 * `game_roster(game_id, only: nil)` - Returns the roster for the specified game.
   * Valid values for `only` are `:home` and `:away`. If not specified, both teams' rosters are included.
 * `division_games_list(division_id)` - Returns all games for a specified division.
@@ -64,7 +58,7 @@ Creating an instance of the class can raise an error if there are network issues
 * `division_teams(division_id)` - Lists all teams in the specified division.
 * `division_leaders(division_id, type: 'Regular Season', limit: 20, metrics: [:points, :goals])` - Lists up to `limit` number of leaders for the specified division.
   * Valid values for `type` are `Regular Season`, `Playoffs`, and `Exhibition`.
-  * Valid values for `metrics` include symbolizing anything listed in `league(league_id)['league']['view_settings']['leader_metrics']`.
+  * Valid values for `metrics` include anything listed in `league(league_id)['league']['view_settings']['leader_metrics']`.
 * `division_suspensions(division_id, only_active: true)` - Get a list of suspensions of players in the specified division.
   * `only_active` controls whether expired suspensions are included or not.
 * `season(season_id)` - Show details for a specific season.
